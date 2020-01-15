@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -18,11 +18,11 @@ var NewsApp = function (_React$Component) {
   }
 
   _createClass(NewsApp, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return React.createElement(
-        'div',
-        null,
+        "div",
+        { id: "tech-section" },
         React.createElement(TechNews, null)
       );
     }
@@ -46,7 +46,7 @@ var TechNews = function (_React$Component2) {
   }
 
   _createClass(TechNews, [{
-    key: 'componentDidMount',
+    key: "componentDidMount",
     value: function componentDidMount() {
       var _this3 = this;
 
@@ -54,13 +54,31 @@ var TechNews = function (_React$Component2) {
         return response.json();
       }).then(function (data) {
         var author = data.articles.map(function (el) {
+          console.log(el);
           return React.createElement(
-            'div',
+            "article",
             null,
+            React.createElement("img", { src: el.urlToImage, alt: "news-img" }),
             React.createElement(
-              'p',
-              null,
-              el.author
+              "div",
+              { "class": "headline" },
+              React.createElement(
+                "h3",
+                null,
+                el.title
+              )
+            ),
+            React.createElement(
+              "div",
+              { "class": "author" },
+              React.createElement(
+                "p",
+                null,
+                "By: ",
+                el.author ? el.author : 'Unknown',
+                "  |  ",
+                el.publishedAt
+              )
             )
           );
         });
@@ -72,10 +90,10 @@ var TechNews = function (_React$Component2) {
       });
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       return React.createElement(
-        'div',
+        "section",
         null,
         this.state.data
       );

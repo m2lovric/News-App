@@ -1,0 +1,32 @@
+#tech-section{
+    display: flex;
+    flex-direction: column;
+}
+
+article{
+    margin: 20px 0;
+    display: grid;
+    width: 50%;
+    grid-template-areas: 
+        "img headline"
+        "img author"
+}
+
+.headline{
+    grid-area: "headline";
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #424242;
+}
+.author{
+    grid-area: "author" / 1 / 1 / 1 / 1;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color:#424242;
+}
+img{
+    grid-area: "img";
+    height: auto;
+    width: 200px;
+}

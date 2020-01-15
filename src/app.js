@@ -5,7 +5,7 @@ class NewsApp extends React.Component {
   }
   render(){
     return(
-      <div>
+      <div id="tech-section">
         <TechNews />
       </div>
     )
@@ -26,10 +26,17 @@ class TechNews extends React.Component {
     })
     .then((data) => {
       let author = data.articles.map((el) => {
+        console.log(el);
         return(
-          <div>
-            <p>{el.author}</p>
-          </div>
+          <article>
+            <img src={el.urlToImage} alt="news-img"/>
+            <div class="headline">
+              <h3>{el.title}</h3>      
+            </div>
+            <div class="author">
+              <p>By: {el.author ? el.author : 'Unknown'}  |  {el.publishedAt}</p>
+            </div>            
+          </article>
         )
       })
       this.setState(() => {
@@ -43,9 +50,9 @@ class TechNews extends React.Component {
   }
   render(){
     return(
-      <div>
+      <section>
         {this.state.data}
-      </div>
+      </section>
     )
   }
 }
