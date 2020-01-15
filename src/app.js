@@ -34,7 +34,7 @@ class TechNews extends React.Component {
               <h3>{el.title}</h3>      
             </div>
             <div class="author">
-              <p>By: {el.author ? el.author : 'Unknown'}  |  {el.publishedAt}</p>
+              <p>By: <span>{el.author ? el.author : 'Unknown'}</span>  |  {el.publishedAt}</p>
             </div>            
           </article>
         )

@@ -75,7 +75,11 @@ var TechNews = function (_React$Component2) {
                 "p",
                 null,
                 "By: ",
-                el.author ? el.author : 'Unknown',
+                React.createElement(
+                  "span",
+                  null,
+                  el.author ? el.author : 'Unknown'
+                ),
                 "  |  ",
                 el.publishedAt
               )
