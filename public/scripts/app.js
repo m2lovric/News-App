@@ -23,6 +23,7 @@ var NewsApp = function (_React$Component) {
       return React.createElement(
         "div",
         { id: "tech-section" },
+        React.createElement(Header, null),
         React.createElement(TechNews, null)
       );
     }
@@ -30,6 +31,41 @@ var NewsApp = function (_React$Component) {
 
   return NewsApp;
 }(React.Component);
+
+var Header = function Header() {
+  return React.createElement(
+    "div",
+    null,
+    React.createElement(
+      "div",
+      { "class": "img-header" },
+      React.createElement(
+        "h1",
+        { "class": "logo-header" },
+        "FRINGE"
+      )
+    ),
+    React.createElement(
+      "ul",
+      null,
+      React.createElement(
+        "li",
+        null,
+        "FRINGE"
+      ),
+      React.createElement(
+        "li",
+        null,
+        "TECH"
+      ),
+      React.createElement(
+        "li",
+        null,
+        "SCIENCE"
+      )
+    )
+  );
+};
 
 var TechNews = function (_React$Component2) {
   _inherits(TechNews, _React$Component2);
@@ -64,7 +100,7 @@ var TechNews = function (_React$Component2) {
               { "class": "headline" },
               React.createElement(
                 "h3",
-                null,
+                { "class": "changeColor" },
                 el.title
               )
             ),

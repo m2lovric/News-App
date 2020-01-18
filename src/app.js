@@ -6,10 +6,26 @@ class NewsApp extends React.Component {
   render(){
     return(
       <div id="tech-section">
+        <Header />
         <TechNews />
       </div>
     )
   }
+}
+
+const Header = () => {
+  return(
+    <div>
+      <div class="img-header">
+        <h1 class="logo-header">FRINGE</h1>
+      </div>
+      <ul>
+        <li>FRINGE</li>
+        <li>TECH</li>
+        <li>SCIENCE</li>
+      </ul>
+    </div>
+  )
 }
 
 class TechNews extends React.Component {
@@ -31,7 +47,7 @@ class TechNews extends React.Component {
           <article>
             <img src={el.urlToImage} alt="news-img"/>
             <div class="headline">
-              <h3>{el.title}</h3>      
+              <h3 class="changeColor">{el.title}</h3>      
             </div>
             <div class="author">
               <p>By: <span>{el.author ? el.author : 'Unknown'}</span>  |  {el.publishedAt}</p>
