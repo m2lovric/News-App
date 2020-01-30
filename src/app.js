@@ -19,11 +19,13 @@ const Header = () => {
       <div class="img-header">
         <h1 class="logo-header">FRINGE</h1>
       </div>
-      <ul>
-        <li>FRINGE</li>
-        <li>TECH</li>
-        <li>SCIENCE</li>
-      </ul>
+      <nav>
+        <ul>
+          <a href="#" active><li>FRINGE</li></a>
+          <a href="#"><li>TECH</li></a>
+          <a href="#"><li>SCIENCE</li></a>
+        </ul>
+      </nav>      
     </div>
   )
 }
@@ -47,7 +49,7 @@ class TechNews extends React.Component {
           <article>
             <img src={el.urlToImage} alt="news-img"/>
             <div class="headline">
-              <h3 class="changeColor">{el.title}</h3>      
+              <h3><a class="changeColor" href={el.url}>{el.title}</a></h3>      
             </div>
             <div class="author">
               <p>By: <span>{el.author ? el.author : 'Unknown'}</span>  |  {el.publishedAt}</p>

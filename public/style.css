@@ -1,4 +1,5 @@
 body{padding: 0; margin: 0;}
+a{text-decoration: none; color: #eee;}
 section{
     display: flex;
     flex-direction: row;
@@ -6,16 +7,57 @@ section{
     justify-content: center;
     background-color: #121212;
 }
+
 .logo-header{
     position: relative;
-    font-family: 'Raleway', sans-serif;
-    font-size: 8em;
+    font-family: 'Heebo', sans-serif;
+    text-shadow: 3px 3px 8px #111;
+    font-weight: 400;
+    font-size: 6em;
     height: 300px;
-    padding-left: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+    color: #eb3b5a;
+    background-color: #eee;
+    background-image: url('/img/low-angle-shot-of-high-rise-building-2096578.jpg');
+    background-size: 100% 100%;
+}
+
+nav {
     margin: 0;
     color: #eee;
-    background-image: url('/img/header-img.jpg');
-    background-size: 100% 100%;
+    background-color: #232323;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 15px;
+    margin: 0 30px;
+}
+
+a:active{
+    background-color: #121212;
+}
+
+nav ul li:hover {
+    background-color: #121212;
 }
 
 article{
@@ -25,7 +67,7 @@ article{
     flex-direction: column;
     justify-content: space-between;
     margin: 2% 2%;
-    background-color: #1d1d1d;
+    background-color: #232323;
    /* box-shadow: 14px 10px 25px 0px rgba(77,77,77,0.3);
     -webkit-box-shadow: 14px 10px 25px 0px rgba(77,77,77,0.3);*/
 }

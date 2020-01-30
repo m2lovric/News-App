@@ -46,22 +46,38 @@ var Header = function Header() {
       )
     ),
     React.createElement(
-      "ul",
+      "nav",
       null,
       React.createElement(
-        "li",
+        "ul",
         null,
-        "FRINGE"
-      ),
-      React.createElement(
-        "li",
-        null,
-        "TECH"
-      ),
-      React.createElement(
-        "li",
-        null,
-        "SCIENCE"
+        React.createElement(
+          "a",
+          { href: "#", active: true },
+          React.createElement(
+            "li",
+            null,
+            "FRINGE"
+          )
+        ),
+        React.createElement(
+          "a",
+          { href: "#" },
+          React.createElement(
+            "li",
+            null,
+            "TECH"
+          )
+        ),
+        React.createElement(
+          "a",
+          { href: "#" },
+          React.createElement(
+            "li",
+            null,
+            "SCIENCE"
+          )
+        )
       )
     )
   );
@@ -100,8 +116,12 @@ var TechNews = function (_React$Component2) {
               { "class": "headline" },
               React.createElement(
                 "h3",
-                { "class": "changeColor" },
-                el.title
+                null,
+                React.createElement(
+                  "a",
+                  { "class": "changeColor", href: el.url },
+                  el.title
+                )
               )
             ),
             React.createElement(
